@@ -71,7 +71,7 @@ Person.prototype.toString = function(){
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
 
 }
 
@@ -90,7 +90,7 @@ function Baby() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
+  1. in non-strict mode, it refers to a reference, but to strict-mode, it can be any value.
   2. 
   3. 
   4. 
