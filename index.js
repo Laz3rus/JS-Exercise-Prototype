@@ -82,8 +82,13 @@ function Car(model, milesPerGallon) {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
-
+function Baby(favoriteToy) {
+  Person.call(this, name age);
+  this.favoriteToy = favoriteToy
+}
+Baby.prototype = Object.create(Person.prototype);
+Baby.prototype.play = function(){
+  return `Playing with ${this.favoriteToy}`
 }
 
 /* 
@@ -91,9 +96,9 @@ function Baby() {
 
   In your own words explain the four principles for the "this" keyword below:
   1. in non-strict mode, it refers to a reference, but to strict-mode, it can be any value.
-  2. 
-  3. 
-  4. 
+  2. classes and function are relatable to 'this' since classes are functions under the hood.
+  3. different from a base class constructors, derived constructors has no initial this binding.
+  4. When a function is called as a method of an object, its 'this' is set to the object the method is called on
 */
 
 
